@@ -2,8 +2,43 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PaperStudio - 打印纸设计工具</title>
+    <title>在线打印纸设计工具｜信纸/稿纸/标签生成</title>
+    <meta name="description" content="PaperStudio 是一款无需安装的在线打印纸设计工具，支持信纸、稿纸、练字纸、标签、工牌、证书等模板设计。内置Excel可变数据批量打印，支持条码/二维码生成、PDF 批量导出，数据本地处理，安全高效。">
+    <meta name="keywords" content="在线打印设计工具,打印纸设计,信纸设计,稿纸生成器,标签打印,工牌打印,证书生成,条码二维码打印,手账内页制作">
+    <link rel="canonical" href="https://88lin.github.io/PaperStudio/" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://88lin.github.io/PaperStudio/">
+    <meta property="og:title" content="在线打印纸设计工具｜信纸/稿纸/标签生成">
+    <meta property="og:description" content="无需安装的在线打印设计工具，支持信纸、稿纸、标签、工牌等模板，Excel 批量打印，PDF 导出，数据本地处理更安全。">
+    <meta property="og:image" content="https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/favicon.67xwxgc03y.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PaperStudio - 在线打印纸设计工具">
+    <meta name="twitter:description" content="支持 Excel 可变数据批量打印的在线纸张设计工具，适合办公、教育、标签打印等场景。">
+    <meta name="twitter:image" content="https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/favicon.67xwxgc03y.svg">
+    <!-- PWA / Mobile -->
+    <meta name="theme-color" content="#e11d48">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" href="https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/favicon.67xwxgc03y.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PaperStudio",
+      "url": "https://88lin.github.io/PaperStudio/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "description": "无需安装的在线打印纸设计工具，支持 Excel 可变数据批量打印、标签、工牌、证书生成。",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY"
+      }
+    }
+    </script>
     <link href="./static/icons.min.css" rel="stylesheet" />
     <link href="./static/coloris.min.css" rel="stylesheet" />
     <link href="./static/toastify.min.css" rel="stylesheet" />
@@ -382,8 +417,8 @@
                 <i class="ph ph-article text-3xl"></i>
               </div>
               <div>
-                <h1 class="text-xl font-bold tracking-tight">PaperStudio</h1>
-                <p class="text-slate-400 text-xs">简单的打印纸设计工具</p>
+                <h1 class="text-xl font-bold tracking-tight">在线打印纸设计</h1>
+                <p class="text-slate-400 text-xs">简单的信稿笺纸设计工具</p>
               </div>
             </div>
             <div class="space-y-4">
@@ -397,38 +432,17 @@
               </button>
             </div>
           </div>
-          <a
-            href="https://github.com/jingguanzhang/PaperStudio"
-            target="_blank"
+          <a href="https://home.nuaa.tech/gzh" target="_blank"
             class="relative z-20 flex items-center gap-2 text-slate-500 hover:text-white transition-colors cursor-pointer w-fit group">
-            <i class="ph ph-github-logo text-2xl group-hover:scale-110 transition-transform"></i>
-            <span class="text-xs font-medium">Github</span>
+            <img src="https://cdn.jsdmirror.com/gh/88lin/picx-images-hosting@master/favicon.67xwxgc03y.svg"
+              class="w-5 h-6 group-hover:scale-110 transition-transform" />
+            <span class="text-sm font-medium">茉灵智库</span>
           </a>
           <i class="ph ph-scroll absolute -bottom-5 -right-10 text-[200px] text-slate-800 opacity-50 rotate-12"></i>
         </div>
         <div class="w-2/3 p-8 bg-gray-50 flex flex-col">
           <h2 class="text-lg font-bold text-slate-800 mb-4 flex justify-between items-center">从模板开始</h2>
           <div id="templateGrid" class="grid grid-cols-2 gap-4 overflow-y-auto pr-2 custom-scrollbar"></div>
-        </div>
-      </div>
-    </div>
-    <div id="contactModal" class="hidden fixed inset-0 z-[60] flex items-center justify-center modal-backdrop transition-opacity duration-200">
-      <div class="bg-white rounded-xl shadow-2xl p-6 w-[320px] text-center relative transform transition-all scale-100">
-        <button
-          onclick="App.ui.hideModal('contactModal')"
-          class="absolute top-3 right-3 text-slate-400 hover:text-slate-600 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition">
-          <i class="ph ph-x text-lg"></i>
-        </button>
-
-        <h3 class="text-lg font-bold text-slate-800 mb-1">联系开发者</h3>
-
-        <div class="bg-white p-2 rounded-xl border border-gray-100 shadow-inner inline-block mb-4">
-          <img src="./static/addme.jpg" alt="联系作者" class="w-48 h-48 object-contain rounded-lg" />
-        </div>
-
-        <div class="space-y-1">
-          <p class="text-sm font-medium text-slate-700">扫码添加微信</p>
-          <p class="text-sm text-slate-400">反馈建议 · 交流</p>
         </div>
       </div>
     </div>
@@ -756,9 +770,6 @@
           class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-50 hover:bg-red-100 text-red-600 border border-red-100 transition text-xs font-bold mr-1">
           <i class="ph ph-heart-straight text-lg"></i>
           <span>支持作者</span>
-        </button>
-        <button onclick="App.ui.showModal('contactModal')" class="flex items-center gap-1 px-3 py-1.5 rounded hover:bg-gray-100 text-md font-medium transition text-gray-600" title="联系作者">
-          <i class="ph ph-wechat-logo text-lg"></i>
         </button>
         <button onclick="App.ui.toggleFullScreen()" class="flex items-center gap-1 px-3 py-1.5 rounded hover:bg-gray-100 text-md font-medium transition text-gray-600" title="全屏模式">
           <i id="fsIcon" class="ph ph-corners-out text-lg"></i>
